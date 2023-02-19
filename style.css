@@ -1,20 +1,22 @@
 * {
   box-sizing: border-box;
   font-family: 'Lexend Deca', sans-serif;
-
-  /* border: 1px solid red; */
 }
 
 html, body {
+  position: relative;
   background-color: hsl(0, 0%, 95%);
-  height: 100vh;
-  width: 100vw;
-  /* height: 100%; */
+  height: 100%;
   width: 100%;
 
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+body {
+  /* border: 2px solid green; */
+
 }
 
 .bright-orange {
@@ -45,6 +47,7 @@ html, body {
   color: hsla(0, 0%, 100%, 0.75);
   font-size: 15px;
   line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .title {
@@ -56,22 +59,18 @@ html, body {
 
 .container {
   border-radius: 0.5rem;
-  height: 55vh;
-  margin: 15vh auto;
+  margin: 14vh auto 3rem;
   overflow: hidden;
-  position: relative;
-  width: 63%;
-
-  /* border: 3px solid cyan; */
+  width: 86%;
+  max-width: 57rem;
 }
 
 .card {
-  border: 0;
   float: left;
   height: 100%;
   margin: 0;
   padding: 3rem;
-  width: 33.33%;
+  width: 100%;
 }
 
 .button-learn-more {
@@ -80,47 +79,50 @@ html, body {
   border-style: none;
   font-weight: bold;
   padding: 1rem 2rem;
-  position: absolute;
-  bottom: 3rem;
+  border: 2px solid hsl(0, 0%, 95%);
+
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.button-learn-more:hover {
+  cursor: pointer;
+  background: transparent;
+  color: hsl(0, 0%, 95%);
+}
 
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
 
-@media (pointer:none), (pointer:coarse), screen and (max-width: 465px) {
-  .container {
-    height: auto;
-    width: 90%;
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
 
-  }
-  
+/* Desktop designs: */
+
+@media screen and (min-width: 768px) {
+
+  /* .container {
+    max-height: 50%;
+    overflow-y: auto;
+  } */
+
   .card {
-    border: 0;
-    float: none;
-    display: block;
-    height: auto;
-    margin: 0;
-    padding: 3rem;
+    width: 33.3333%;
+  }  
+
+  .description {
+    height: 15rem;
+    /* height: 50%; */
+    overflow-y: auto;
+  }  
+
+  /* footer {
+    bottom: 0;
     width: 100%;
-
-    /* border: 3px solid cyan; */
-
-  }
-  
-  .button-learn-more {
-    /* background-color: hsl(0, 0%, 95%);
-    border-radius: 2rem;
-    border-style: none;
-    font-weight: bold;
-    padding: 1rem 2rem; */
-    position: static;
-    margin-top: 2rem;
-
-    /* position: absolute;
-    bottom: 3rem; */
-  }
-  
-
+    position: absolute;
+    margin: 0 auto;
+    border: 2px solid red;
+  } */
 
 }
